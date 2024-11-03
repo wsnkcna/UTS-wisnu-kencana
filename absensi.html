@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Informasi Manajemen Karyawan</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- <style>
+      body {
+        display: flex;
+        height: 100vh;
+      }
+      .sidebar {
+        min-width: 200px;
+        background-color: #f8f9fa;
+      }
+      .content {
+        flex-grow: 1;
+        padding: 20px;
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <!-- Sidebar -->
+    <main class="grid col-12">
+      <aside
+        class="col-start-1 col-end-2 flex flex-col justify-between h-[100vh] sticky top-0 left-0"
+      >
+        <div>
+          <div class="bg-blue-500 font-bold text-2xl p-4 text-white mb-5">
+            <h5>PT.Sentosa</h5>
+          </div>
+          <ul class="p-2">
+            <a href="./index.html" class="group-hover:text-gray-500">
+              <li
+                class="flex items-center gap-2 hover:bg-blue-200 p-2 rounded-sm group"
+              >
+                <i class="bx bx-home-alt-2 text-2xl"></i>
+                Dashboard
+              </li>
+            </a>
+          </ul>
+          <ul class="p-2">
+            <h5 class="text-lg font-semibold">Menu Karyawan</h5>
+            <a class="hover:text-white group" href="./karyawan.html">
+              <li
+                class="group-hover:bg-blue-200 p-2 rounded-sm group flex items-center gap-2 p-2"
+              >
+                <i class="bx bx-user text-2xl"></i>
+                Karyawan
+              </li>
+            </a>
+            <a class="hover:text-white group" href="./jabatan.html">
+              <li
+                class="group-hover:bg-blue-200 p-2 rounded-sm group flex items-center gap-2 p-2"
+              >
+                <i class="bx bx-user-plus text-3xl"></i>
+                Jabatan
+              </li>
+            </a>
+            <a class="hover:text-white group" href="./divisi.html">
+              <li
+                class="group-hover:bg-blue-200 p-2 rounded-sm group flex items-center gap-2 p-2"
+              >
+                <i class="bx bx-user-plus text-3xl"></i>
+
+                Divisi
+              </li>
+            </a>
+          </ul>
+
+          <ul class="p-2">
+            <h5 class="text-lg font-semibold">Menu Absensi</h5>
+            <a class="hover:text-white group" href="./absensi.html">
+              <li
+                class="group-hover:bg-blue-200 p-2 rounded-sm group flex items-center gap-2 p-2"
+              >
+                <i class="bx bxs-calendar-alt text-2xl"></i>
+                Absensi
+              </li>
+            </a>
+            <a class="hover:text-white group" href="./izin.html">
+              <li
+                class="group-hover:bg-blue-200 p-2 rounded-sm group flex items-center gap-2 p-2"
+              >
+                <i class="bx bxs-calendar-check text-2xl"></i>
+                Izin
+              </li>
+            </a>
+            <a class="hover:text-white group" href="./lembur.html">
+              <li
+                class="group-hover:bg-blue-200 p-2 rounded-sm group flex items-center gap-2 p-2"
+              >
+                <i class="bx bxs-calendar-check text-2xl"></i>
+                Lembur
+              </li>
+            </a>
+          </ul>
+        </div>
+
+        <div class="flex justify-between items-center bg-gray-100 p-2">
+          <div class="flex gap-2">
+            <img
+              src="https://img.freepik.com/free-vector/smiling-young-man-illustration_1308-173524.jpg?t=st=1730607910~exp=1730611510~hmac=4fe388f3f18ed8f2bbe292a92044a4b05ac49b08320d955d02b1eab092fae9c6&w=740"
+              alt="avatar"
+              class="w-12 h-12 object-cover rounded-full"
+            />
+            <div>
+              <p>Welcome, Wisnu</p>
+              <p class="font-semibold">Administrator</p>
+            </div>
+          </div>
+
+          <button class="bg-red-400 p-1 rounded-md text-white">
+            <i class="bx bx-log-out-circle text-2xl"></i>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <section class="col-start-2 col-end-13 bg-green-100">
+        <nav
+          class="sticky top-0 z-50 bg-blue-500 w-[100%] py-2 px-10 flex justify-between shadow-md"
+        >
+          <div></div>
+          <img
+            src="https://img.freepik.com/free-vector/smiling-young-man-illustration_1308-173524.jpg?t=st=1730607910~exp=1730611510~hmac=4fe388f3f18ed8f2bbe292a92044a4b05ac49b08320d955d02b1eab092fae9c6&w=740"
+            alt="avatar"
+            class="w-12 h-12 object-cover rounded-full self-end"
+          />
+        </nav>
+
+        <div
+          class="h-[30vh] flex flex-col justify-center bg-blue-500 text-white px-10 "
+        >
+          <h2 class="text-3xl font-bold">Sistem Informasi Manajemen</h2>
+          <p class="text-lg font-semibold">Admin Dashboard</p>
+        </div>
+
+        <div
+          class="px-10 mx-5 -mt-5 bg-white rounded-md flex flex-wrap justify-between gap-5 py-5 shadow-md"
+        >
+         
+
+        <div class="flex justify-between items-center mb-10 w-full">
+          <h6>Daftar Hadir Karyawan</h6>
+          <!-- <a href="./formdivisi">
+            <button class="bg-blue-500 p-2 rounded-sm text-white">
+              Tambah Data Divisi
+            </button>
+          </a> -->
+        </div>
+
+
+        <div class="relative overflow-x-auto shadow-md sm:rounded-md w-full">
+          <table class="w-full text-sm text-left text-gray-500">
+              <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                  <tr>
+                      <th scope="col" class="px-6 py-3">ID</th>
+                      <th scope="col" class="px-6 py-3">Nama</th>
+                      <th scope="col" class="px-6 py-3">Tanggal</th>
+                      <th scope="col" class="px-6 py-3">Lokasi</th>
+                      <th scope="col" class="px-6 py-3">Jam Masuk</th>
+                      <th scope="col" class="px-6 py-3">Jam Keluar</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr class="bg-white border-b">
+                      <td class="px-6 py-4">DIV017</td>
+                      <td class="px-6 py-4">Tono Wijaya</td>
+                      <td class="px-6 py-4">2023-05-26</td>
+                      <td class="px-6 py-4">Unit Produksi</td>
+                      <td class="px-6 py-4">07:45:00</td>
+                      <td class="px-6 py-4">10:00:00</td>
+                  </tr>
+                  <tr class="bg-gray-50 border-b">
+                      <td class="px-6 py-4">DIV019</td>
+                      <td class="px-6 py-4">Vino Putra</td>
+                      <td class="px-6 py-4">2023-05-28</td>
+                      <td class="px-6 py-4">Unit Logistik</td>
+                      <td class="px-6 py-4">08:45:00</td>
+                      <td class="px-6 py-4">11:00:00</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                      <td class="px-6 py-4">DIV012</td>
+                      <td class="px-6 py-4">Nina Wulandari</td>
+                      <td class="px-6 py-4">2023-05-21</td>
+                      <td class="px-6 py-4">Unit SDM</td>
+                      <td class="px-6 py-4">08:15:00</td>
+                      <td class="px-6 py-4">10:30:00</td>
+                  </tr>
+                  <tr class="bg-gray-50 border-b">
+                      <td class="px-6 py-4">DIV021</td>
+                      <td class="px-6 py-4">Yudi Santoso</td>
+                      <td class="px-6 py-4">2023-05-30</td>
+                      <td class="px-6 py-4">Unit R&D</td>
+                      <td class="px-6 py-4">12:45:00</td>
+                      <td class="px-6 py-4">15:00:00</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                      <td class="px-6 py-4">DIV018</td>
+                      <td class="px-6 py-4">Ulfah Rizki</td>
+                      <td class="px-6 py-4">2023-05-27</td>
+                      <td class="px-6 py-4">Unit Legal</td>
+                      <td class="px-6 py-4">11:15:00</td>
+                      <td class="px-6 py-4">13:25:00</td>
+                  </tr>
+                  <tr class="bg-gray-50 border-b">
+                      <td class="px-6 py-4">DIV014</td>
+                      <td class="px-6 py-4">Putri Handayani</td>
+                      <td class="px-6 py-4">2023-05-23</td>
+                      <td class="px-6 py-4">Unit Marketing</td>
+                      <td class="px-6 py-4">13:00:00</td>
+                      <td class="px-6 py-4">15:15:00</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                      <td class="px-6 py-4">DIV020</td>
+                      <td class="px-6 py-4">Winda Safitri</td>
+                      <td class="px-6 py-4">2023-05-29</td>
+                      <td class="px-6 py-4">Unit Purchasing</td>
+                      <td class="px-6 py-4">15:30:00</td>
+                      <td class="px-6 py-4">17:45:00</td>
+                  </tr>
+                  <tr class="bg-gray-50 border-b">
+                      <td class="px-6 py-4">DIV015</td>
+                      <td class="px-6 py-4">Rendi Setiawan</td>
+                      <td class="px-6 py-4">2023-05-24</td>
+                      <td class="px-6 py-4">Unit IT</td>
+                      <td class="px-6 py-4">10:45:00</td>
+                      <td class="px-6 py-4">12:55:00</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                      <td class="px-6 py-4">DIV013</td>
+                      <td class="px-6 py-4">Oscar Pratama</td>
+                      <td class="px-6 py-4">2023-05-22</td>
+                      <td class="px-6 py-4">Unit Keuangan</td>
+                      <td class="px-6 py-4">09:30:00</td>
+                      <td class="px-6 py-4">11:45:00</td>
+                  </tr>
+                  <tr class="bg-gray-50 border-b">
+                      <td class="px-6 py-4">DIV016</td>
+                      <td class="px-6 py-4">Sinta Dewi</td>
+                      <td class="px-6 py-4">2023-05-25</td>
+                      <td class="px-6 py-4">Unit Operasional</td>
+                      <td class="px-6 py-4">14:30:00</td>
+                      <td class="px-6 py-4">16:40:00</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      
+          
+        </div>
+      </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

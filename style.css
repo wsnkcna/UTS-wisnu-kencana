@@ -1,0 +1,51 @@
+
+
+/* Reset some basic styling */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling untuk sidebar */
+.sidebar {
+    min-width: 200px;
+    background-color: #f8f9fa;
+    transition: width 0.3s;
+}
+
+/* Menjaga sidebar tetap terlihat pada layar kecil */
+.sidebar h4 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-link {
+    font-size: 1rem;
+}
+
+/* Styling untuk konten */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .sidebar h4 {
+        font-size: 1.5rem;
+    }
+}
